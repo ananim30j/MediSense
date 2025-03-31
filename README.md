@@ -207,5 +207,7 @@ We evaluated generated explanations using:
 - 📄 [BioBERT Paper](https://arxiv.org/abs/1901.08746)
 - 📄 [LaMini-Flan Paper](https://arxiv.org/pdf/2304.14402)
 - 🧰 [Transformers Library](https://huggingface.co/docs/transformers/en/index)
+- 📹 [Named Entity Recognition with BioBERT](https://youtu.be/zjYs52Met8E?si=9geahLbvp7QAHIMH)
+- 
 
 
