@@ -294,11 +294,11 @@ Despite promising results, MediSense has several limitations:
 
 - **Factual Grounding**: The reasoning model (LaMini-Flan-T5) is not grounded in external knowledge bases like PubMed or MedQA. Explanations are purely generated from pretraining and may lack verifiable citations.
 
+- **Computational Constraints**: Due to limited compute availability, we could not retrain or fine-tune larger generative models. In fact, full training runs were estimated at over **55 hours** on a GPU. We instead opted for zero-shot or instruction-tuned models (e.g., LaMini-Flan-T5-248M), which trade depth for accessibility.
+
 - **Model Bias**: BioBERT and LaMini-Flan were pretrained on domain-specific and general corpora, respectively. This introduces potential bias, especially in interpreting controversial or nuanced health claims.
 
 - **Data Coverage**: While MediSense performs well on general wellness and common medical topics, the underlying dataset (real and synthetic) lacks comprehensive coverage of the entire healthcare spectrum. Specialized fields like rare diseases, surgical techniques, or pharmacogenomics are underrepresented.
-
-- **Computational Constraints**: Due to limited compute availability, we could not retrain or fine-tune larger generative models. In fact, full training runs were estimated at over **55 hours** on a GPU. We instead opted for zero-shot or instruction-tuned models (e.g., LaMini-Flan-T5-248M), which trade depth for accessibility.
 
 - **Score Calibration**: The credibility score, derived from softmax probabilities, is not calibrated to real-world clinical certainty. Users should not interpret a high score as medical advice.
 
