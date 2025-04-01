@@ -207,6 +207,19 @@ explanation = reasoning_pipeline(
 
 ---
 
+### ❓ Audience Checkpoint
+
+> **Why do you think we used *two separate models* (one for classification, one for explanation) instead of training a single multi-task model?**
+
+<details>
+<summary>💡 Answer</summary>
+
+Using separate models allows us to **decouple reasoning from prediction**, enabling interpretability and modular control. The classification model (BioBERT) outputs a numeric credibility score, while the generative model (LaMini-Flan-T5) provides a textual explanation based on that score. This separation ensures the reasoning is conditioned on a well-calibrated judgment rather than being entangled in the classification training process.
+
+</details>
+
+---
+
 ## 💻 Implementation & Demo
 
 ### 🧪 Streamlit App
@@ -259,7 +272,7 @@ To evaluate MediSense, we used both **classification** and **generation** metric
 - **F1 Score**: `27.82%` – harmonic mean of precision and recall.
 - **Loss**: `0.4437` – cross-entropy loss during evaluation.
 
-These scores reflect a moderately imbalanced dataset and highlight the challenge of classifying claims as credible when most real-world data skews toward misinformation. This justified the need for synthetic data augmentation.
+We selected Epoch 1 for final evaluation due to its superior F1-score and recall, which align with the project's objective of minimizing false negatives in misinformation detection. These scores reflect a moderately imbalanced dataset and highlight the challenge of classifying claims as credible when most real-world data skews toward misinformation. This justified the need for synthetic data augmentation.
 
 ---
 
@@ -359,6 +372,7 @@ MediSense revealed that pairing **domain-specific transformers** like BioBERT wi
 
 ```bash
 ├── README.md                         # Project overview and instructions
+├── requirements.txt                  # Required libraries to download for project
 ├── app.py                            # Streamlit application for user interface
 ├── claim_explanations.csv            # Real claims and their explanations
 ├── claims.csv                        # Raw input claims for BioBERT fine-tuning
@@ -463,6 +477,7 @@ Make sure your final project folder looks like this:
 ```
 ├── app.py
 ├── README.md
+├── requirements.txt
 ├── train_biobert.ipynb
 ├── generate_synthetic_claims.ipynb
 ├── lamini_reasoning_eval.ipynb
@@ -474,6 +489,11 @@ Make sure your final project folder looks like this:
 ├── biobert_misinformation_model/        # ✅ Fine-tuned BioBERT model
 │   ├── config.json
 │   ├── pytorch_model.bin
+│   └── ...
+├── lamini_flant5_model/                 # ✅ Saved reasoning model
+│   ├── config.json
+│   ├── tokenizer_config.json
+│   ├── model.safetensors
 │   └── ...
 ```
 
