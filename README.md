@@ -88,12 +88,6 @@ Due to **high false claim prevalence** in the original dataset, we generated **h
 
 ## 🧬 Model Architecture: How MediSense Works
 
-MediSense uses a **dual-transformer pipeline** built on top of Hugging Face Transformers. Below is the architecture of each component:
-
----
-
-## 🧬 Model Architecture: How MediSense Works
-
 MediSense uses a **two-part transformer pipeline**, where both components are derived from the **Transformer architecture** introduced by Vaswani et al. This pipeline combines the **encoder-based power of BERT** with the **encoder-decoder reasoning capabilities of T5**.
 
 ---
