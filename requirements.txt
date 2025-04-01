@@ -1,0 +1,41 @@
+#requirements to run the project
+# Hugging Face Transformers library for model training and inference
+transformers==4.25.1
+
+# PyTorch library (with CUDA support if running on a GPU, else use the CPU version)
+torch==1.13.1
+torch==1.13.1+cpu (for CPU only)
+torch==1.13.1+cu113 (for GPU with cuda)
+
+
+# Streamlit for the interactive web app
+streamlit==1.17.2
+
+# pandas for data manipulation
+pandas==1.5.3
+
+# scikit-learn for machine learning utilities and metrics
+scikit-learn==1.2.1
+
+# tqdm for progress bars
+tqdm==4.64.1
+
+# Evaluate package from Hugging Face for evaluation metrics (ROUGE, BLEU, etc.)
+evaluate==0.4.3
+
+# sacrebleu for BLEU score evaluation
+sacrebleu==2.3.1
+
+# Regular expressions for text cleaning
+regex==2023.3.23
+
+# Requests for interacting with Hugging Face API
+requests==2.28.1
+
+# Other general utilities for system operations
+numpy==1.24.2
+                     
+matplotlib==3.6.0
+                     
+seaborn==0.11.2
+

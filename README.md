@@ -382,6 +382,7 @@ MediSense revealed that pairing **domain-specific transformers** like BioBERT wi
 ├── lamini_reasoning_eval.ipynb       # Evaluation notebook for BLEU/ROUGE scores
 ├── synthetic_claim_explanations.csv  # Cleaned synthetic claims with scores/explanations
 ├── train_biobert.ipynb               # Fine-tuning notebook for BioBERT classifier
+├── requirements.txt                  # Lists all the Python packages and their versions that the project depends on
 ```
 ### 🔗 External Resources
 
@@ -486,6 +487,7 @@ Make sure your final project folder looks like this:
 ├── claim_explanations.csv
 ├── lamini_generated_explanations.csv
 ├── synthetic_claim_explanations.csv
+├── requirements.txt 
 ├── biobert_misinformation_model/        # ✅ Fine-tuned BioBERT model
 │   ├── config.json
 │   ├── pytorch_model.bin
